@@ -1,0 +1,25 @@
+.container {
+    width: 1680px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+
+}
+
+.menu {
+    width: 100%;
+    height: 60px;
+    background-color: bisque;
+}
+
+.main {
+    background-color: bisque;
+}
+
+.footer {
+    background-color: black;
+    color: aliceblue;
+}
