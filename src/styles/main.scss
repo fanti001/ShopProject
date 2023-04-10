@@ -1,0 +1,13 @@
+@import './reset';
+@import './_nav-bar.scss';
+@import './video-section';
+@import './products';
+@import './newsletter';
+@import './products-soon';
+@import './map';
+@import './footer';
+
+.app {
+   width: 100%;
+   min-height: 100vh;
+}
