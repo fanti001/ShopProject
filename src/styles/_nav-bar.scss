@@ -1,4 +1,77 @@
 .nav-bar {
-   border: solid black 3px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
    height: 60px;
+   width: 100%;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 1.6rem;
+
+   .navbar-logo {
+      display: block;
+      height: 100%;
+      width: 300px;
+      background-image: url('../assets/sample-logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+   .navbar-menu {
+      width: 400px;
+      .menu-list {
+         display: flex;
+         
+         justify-content: space-between;
+         li {
+            a {
+            color: hsl(204, 97%, 54%);
+            font-weight: 400;
+            text-decoration: none;
+            transition: .15s;
+            }
+            a:hover {
+               color: hsl(204, 97%, 44%);
+            }
+         }
+         
+      }
+   }
+
+   .navbar-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      height: 100%;
+      margin-left: auto;
+      
+
+      button {
+         border:none;
+         background-color: transparent;
+         height: 40px;
+         width: 130px;
+         border-radius: 6px;
+         font-size: 1.6rem;
+         transition: .15s;
+      }
+      
+      .panel-login {
+         color: hsl(204, 97%, 54%);
+         border: 2px solid hsl(204, 97%, 54%);
+        
+      }
+      .panel-login:hover {
+         color: hsl(204, 97%, 44%);
+         border: 2px solid hsl(204, 97%, 44%);
+      }
+      .panel-register {
+         color: #fff;
+         background-color: hsl(204, 97%, 54%);
+      }
+      .panel-register:hover {
+         background-color: hsl(204, 97%, 44%);
+         
+      }
+   }
 }
