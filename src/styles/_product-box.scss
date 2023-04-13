@@ -1,0 +1,32 @@
+.product-box {
+  width: 250px;
+  height: 370px;
+  border: #0386dd solid 1px;
+  margin-left: 30px;
+  //position: absolute;
+}
+.product-image {
+  width: 250px;
+  //max-width: 100%;
+}
+.short-desc {
+  font-size: small;
+  //top: 150px;
+  //position: relative;
+}
+.price-box {
+  //top: 200px;
+  //position: relative;
+}
+.price-discount {
+  font-size: large;
+  color: black;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.price-normal {
+  font-size: xx-large;
+  font-weight: bold;
+  color: crimson;
+  margin-left: 70px;
+}

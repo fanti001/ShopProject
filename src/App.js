@@ -12,7 +12,6 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <NavBar />
-
         <Routes>
           <Route path='/' element={<FeaturesPage />} />
           <Route path='/pricing' element={<PricingPage />} />

@@ -1,8 +1,13 @@
+import ProductBox from "./ProductBox";
+
 const Products = () => {
    return (
       <div className="products">
-         produkty
+
+         <h1>Produkty</h1>
+            <ProductBox />
       </div>
+
    );
 }
 
