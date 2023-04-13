@@ -1,9 +1,11 @@
+import Product from "./Product";
+
 const Products = () => {
    return (
       <div className="products">
-         produkty
+         < Product />
       </div>
    );
 }
 
-export default Products;
+export default Products; 

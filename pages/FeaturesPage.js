@@ -1,6 +1,6 @@
 
 import VideoSection from '../src/components/VideoSeciton';
-import Products from '../src/components/Products';
+import Products from '../src/components/Product/Products';
 import Newsletter from '../src/components/Newsletter';
 import ProductsSoon from '../src/components/ProductsSoon';
 import Map from '../src/components/Map';
