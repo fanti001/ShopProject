@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import  Link  from 'next/link'
 
 
 const NavBar = () => {
@@ -12,16 +12,16 @@ const NavBar = () => {
          <nav className='navbar-menu'>
             <ul className='menu-list'>
                <li>
-                  <Link to="/">Features</Link>
+                  <Link href="/FeaturesPage">Features</Link>
                </li>
                <li>
-                  <Link to="/pricing">Pricing</Link>
+                  <Link href="/PricingPage">Pricing</Link>
                </li>
                <li>
-                  <Link to="/community">Community</Link>
+                  <Link href="/CommunityPage">Community</Link>
                </li>
                <li>
-                  <Link to="/support">Support</Link>
+                  <Link href="/SupportPage">Support</Link>
                </li>
 
             </ul>
