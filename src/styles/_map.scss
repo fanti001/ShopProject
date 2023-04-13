@@ -1,4 +1,33 @@
 .map {
-   height: 50vh;
-   border: solid black 3px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 600px;
+   padding: 80px;
+   background-color: #F5F5F5;
+   .map-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      flex-basis: 50%;
+      margin-right: 100px;
+      h4 {
+         font-size: 2.6rem;
+         font-weight: 700;
+         margin: 0 0 30px;
+         
+      }
+      p {
+         font-size: 2rem;
+         font-weight: 400;
+      }
+   }
+   .map-googlemaps {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-basis: 50%;
+   }
 }
