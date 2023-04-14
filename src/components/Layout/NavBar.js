@@ -4,10 +4,10 @@ import  Link  from 'next/link'
 const NavBar = () => {
    return (
       <div className="nav-bar">
-         <div className='navbar-logo'>
+       <Link href='/' className='navbar-logo'> </Link>
 
 
-         </div>
+         
 
          <nav className='navbar-menu'>
             <ul className='menu-list'>
