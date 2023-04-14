@@ -1,9 +1,10 @@
-import Map from "../src/components/Map";
+// import Map from "../src/components/Map";
+import Header from "../src/components/Header/Header";
 function HomePage() {
 	return (
 		<div className='app'>
-			<h1> hello our Shop App</h1>
-			<Map />
+			<Header></Header>
+			{/* <Map /> */}
 		</div>
 	);
 }

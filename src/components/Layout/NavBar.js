@@ -12,24 +12,22 @@ const NavBar = () => {
          <nav className='navbar-menu'>
             <ul className='menu-list'>
                <li>
-                  <Link href="/FeaturesPage">Features</Link>
+                  <Link href="/FeaturesPage">headphones</Link>
                </li>
                <li>
-                  <Link href="/PricingPage">Pricing</Link>
+                  <Link href="/PricingPage">speakers</Link>
                </li>
                <li>
-                  <Link href="/CommunityPage">Community</Link>
+                  <Link href="/CommunityPage">earphones</Link>
                </li>
-               <li>
-                  <Link href="/SupportPage">Support</Link>
-               </li>
+              
 
             </ul>
          </nav>
 
          <div className="navbar-panel">
-            <button className="panel-login">Log in</button>
-            <button className="panel-register">Register</button>
+            <button className="panel-login">Cart</button>
+            
          </div>
       </div>
    );
