@@ -27,7 +27,6 @@ const Map = () => {
 
 
 
-
    return (
       <div className="map">
          <div className="map-desc">
