@@ -6,22 +6,20 @@ const NavBar = () => {
       <div className="nav-bar">
          <div className="nav-bar__menu-button">
 
-         </div>
+         
 
          {/* <nav className='navbar-menu'>
             <ul className='menu-list'>
                <li>
-                  <Link href="/FeaturesPage">Features</Link>
+                  <Link href="/FeaturesPage">headphones</Link>
                </li>
                <li>
-                  <Link href="/PricingPage">Pricing</Link>
+                  <Link href="/PricingPage">speakers</Link>
                </li>
                <li>
-                  <Link href="/CommunityPage">Community</Link>
+                  <Link href="/CommunityPage">earphones</Link>
                </li>
-               <li>
-                  <Link href="/SupportPage">Support</Link>
-               </li>
+              
 
             </ul>
          </nav> */}
@@ -30,7 +28,6 @@ const NavBar = () => {
          </div>
 
          <div className="nav-bar__cart">
-
          </div>
       </div>
    );
