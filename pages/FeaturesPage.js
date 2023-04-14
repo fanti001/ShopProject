@@ -1,5 +1,5 @@
 
-import VideoSection from '../src/components/VideoSeciton';
+import NewProduct from '../src/components/NewProduct';
 import Products from '../src/components/Products';
 import Newsletter from '../src/components/Newsletter';
 import ProductsSoon from '../src/components/ProductsSoon';
@@ -9,7 +9,7 @@ import ProductsSoon from '../src/components/ProductsSoon';
 const FeaturesPage = () => {
    return (
       <>
-         <VideoSection />
+         <NewProduct />
          <Products />
          <Newsletter />
          <ProductsSoon />
