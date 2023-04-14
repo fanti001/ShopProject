@@ -1,15 +1,14 @@
-import  Link  from 'next/link'
+import Link from 'next/link'
 
 
 const NavBar = () => {
    return (
       <div className="nav-bar">
-         <div className='navbar-logo'>
-
+         <div className="nav-bar__menu-button">
 
          </div>
 
-         <nav className='navbar-menu'>
+         {/* <nav className='navbar-menu'>
             <ul className='menu-list'>
                <li>
                   <Link href="/FeaturesPage">Features</Link>
@@ -25,11 +24,13 @@ const NavBar = () => {
                </li>
 
             </ul>
-         </nav>
+         </nav> */}
+         <div className='nav-bar__logo'>
+            <h1>audiophile</h1>
+         </div>
 
-         <div className="navbar-panel">
-            <button className="panel-login">Log in</button>
-            <button className="panel-register">Register</button>
+         <div className="nav-bar__cart">
+
          </div>
       </div>
    );
