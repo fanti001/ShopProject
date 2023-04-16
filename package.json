@@ -17,6 +17,7 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
+		"lint": "next lint",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
@@ -24,8 +25,7 @@
 	},
 	"eslintConfig": {
 		"extends": [
-			"react-app",
-			"react-app/jest"
+			"react-app"
 		]
 	},
 	"browserslist": {
@@ -39,5 +39,9 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"@next/eslint-plugin-next": "^13.3.0",
+		"eslint-config-next": "13.3.0"
 	}
 }
