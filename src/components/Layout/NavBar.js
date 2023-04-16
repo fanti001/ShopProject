@@ -6,8 +6,8 @@ const NavBar = () => {
       <div className="nav-bar">
          <div className="nav-bar__menu-button">
 
-         
 
+         </div>
          {/* <nav className='navbar-menu'>
             <ul className='menu-list'>
                <li>
