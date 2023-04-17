@@ -1,7 +1,7 @@
 import Product from './Product'
-import ProductHeadphones from '../../public/assets/product-headphones.png'
-import ProductSpeaker from '../../public/assets/product-speaker.png'
-import ProductEarphones from '../../public/assets/product-earphones.png'
+import ProductHeadphones from '../../../public/assets/product-headphones.png'
+import ProductSpeaker from '../../../public/assets/product-speaker.png'
+import ProductEarphones from '../../../public/assets/product-earphones.png'
 
 const Products = () => {
    return (

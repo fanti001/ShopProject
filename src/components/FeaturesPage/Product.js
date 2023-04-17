@@ -6,10 +6,10 @@ const Product = (props) => {
 
          </div>
          <span className="product__name">{props.productName}</span>
-         <div className="product__button">
-            <a>Shop</a>
+         <button className="product__button">
+            Shop
             <span></span>
-         </div>
+         </button>
       </div>
    );
 }
