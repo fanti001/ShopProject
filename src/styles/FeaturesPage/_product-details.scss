@@ -1,0 +1,163 @@
+.product-details {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   font-family: "Lato", sans-serif;
+   & > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px 30px;
+      overflow: hidden;
+      border-radius: 10px;
+      width: 90%;
+      min-width: 280px;
+      margin-top: 20px;
+   }
+   .product-details__speaker-zx9 {
+      height: 500px;
+      background-color: #D87C49;
+      .speaker-zx9__logo {
+         position: relative;
+         height: 40%;
+         width: 100%;
+         background-image: url('../../../public/assets/product-speaker.png');
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+
+         &::before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            content: '';
+            height: 170%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+         }
+         &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            content: '';
+            height: 150%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+         }
+      }
+      span {
+         display: block;
+         width: 60%;
+         color: white;
+         font-size: 3.6rem;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: 700;
+
+      }
+      p{
+         font-size: 1.8rem;
+         color: rgb(206,206,206);
+         font-weight: 300;
+         text-align: center;
+      }
+      button {
+         width: 150px;
+         height: 45px;
+         background-color: #000000;
+         border: 1px solid #000000;
+         font-weight: 600;
+         text-transform: uppercase;
+         color: #ffffff;
+         margin-top: 20px;
+        
+      }
+   }
+   .product-details__speaker-zx7 {
+      position: relative;
+      height: 400px;
+      background-color: #EAEAEA;
+      color: #000000;
+      align-content: center;
+      justify-content: flex-start;
+      z-index: -2;
+      .speaker-zx7__background {
+         position: absolute;
+         width: 70%;
+         aspect-ratio: 1/1;
+         right: -150px;
+         background-image: url('../../../public/assets/details-speaker-zx7.png');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: contain;
+         z-index: -1;
+      }
+      .speaker-zx7__desc {
+         span {
+            display: block;
+            width: 100%;
+            font-size: 3.6rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 20px;
+         }
+         button {
+            width: 150px;
+            height: 45px;
+            background-color: transparent;
+            border: 1px solid #000000;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+         }
+   }
+   }
+
+   .product-details__earphones-yx1 {
+      padding: 0px;
+      & > div {
+         height: 240px;
+         width: 100%;
+         background-color: #000000;
+         border-radius: 10px;
+         padding: 50px 20px 30px;
+      }
+      .earphones-yx1__bg {
+         background-image: url('../../../public/assets/details-earphones-yx1.jpg');
+         background-size:cover;
+         background-repeat: no-repeat;
+         background-position: center;
+         opacity: 0.9;
+      }
+      .earphones-yx1__desc {
+         display: flex;
+         flex-wrap: wrap;
+         align-content: center;
+         margin-top: 20px;
+         background-color: #EAEAEA;
+         span {
+            display: block;
+            width: 100%;
+            font-size: 3.6rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 20px;
+         }
+         button {
+            width: 150px;
+            height: 45px;
+            background-color: transparent;
+            border: 1px solid #000000;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+         }
+   }
+   }
+}
