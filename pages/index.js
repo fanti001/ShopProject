@@ -1,11 +1,8 @@
-// import Map from "../src/components/Map";
-
 import NewProduct from '../src/components/HomePage/NewProduct';
 import Products from '../src/components/HomePage/Products';
 import ProductDetails from '../src/components/HomePage/ProductDetails';
-//unused at the moment 
-// import Newsletter from '../src/components/Newsletter';
-// import ProductsSoon from '../src/components/ProductsSoon';
+import Description from '../src/components/HomePage/Description';
+
 
 
 function HomePage() {
@@ -14,11 +11,8 @@ function HomePage() {
 			<NewProduct />
 			<Products />
 			<ProductDetails />
-			{/* 
-		 unused at the moment
-		 <Newsletter />
-         <ProductsSoon /> */}
-			{/* <Map /> */}
+			<Description />
+
 		</div>
 	);
 }
