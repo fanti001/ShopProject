@@ -7,10 +7,10 @@
 
 @import './reset';
 @import './_nav-bar.scss';
-@import './FeaturesPage/new-product';
-@import './FeaturesPage/products';
-@import './FeaturesPage/product';
-@import './FeaturesPage/product-details';
+@import './HomePage/new-product';
+@import './HomePage/products';
+@import './HomePage/product';
+@import './HomePage/product-details';
 
 .app {
    width: 100%;
