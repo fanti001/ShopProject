@@ -49,6 +49,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      height: 20px;
       width: 80px;
       position: absolute;
       bottom: 0;
@@ -56,12 +57,15 @@
       transform: translate(-50%,-50%);
       font-size: 1.4rem;
       color: rgb(131,131,131);
+      border: none;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
    span {
       display: block;
-      width: 15px;
       aspect-ratio: 1/1;
+      height: 75%;
       margin-left: 5px;
-      background-image: url('../../public/assets/anglearrow.svg');
+      background-image: url('../../../public/assets/anglearrow.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
