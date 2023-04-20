@@ -20,7 +20,7 @@ const NavBar = () => {
 					</li>
 					<li>
 						<Link
-							href='/FeaturesPage'
+							href='/HeadphonesPage'
 							onClick={showNavigation}
 							className='navLink'>
 							headphones
@@ -28,7 +28,7 @@ const NavBar = () => {
 					</li>
 					<li>
 						<Link
-							href='/PricingPage'
+							href='/SpeakersPage'
 							onClick={showNavigation}
 							className='navLink'>
 							speakers
@@ -36,7 +36,7 @@ const NavBar = () => {
 					</li>
 					<li>
 						<Link
-							href='/CommunityPage'
+							href='/EarphonesPage'
 							onClick={showNavigation}
 							className='navLink'>
 							earphones

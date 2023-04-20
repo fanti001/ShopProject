@@ -1,7 +1,8 @@
 
-const FeaturesPage = () => {
+const HeadphonesPage = () => {
    return (
       <>
+      <p>headphones</p>
          {/* them components moved to homePage( index.js) */}
          {/* <NewProduct />
          <Products />
@@ -12,4 +13,4 @@ const FeaturesPage = () => {
    );
 }
 
-export default FeaturesPage;
+export default HeadphonesPage;
