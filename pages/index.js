@@ -7,8 +7,10 @@ import Description from '../src/components/HomePage/Description';
 
 function HomePage() {
 	return (
-		<div className='app'>
-			<NewProduct />
+		<div
+		 className='app'
+		 >
+			<NewProduct id='01'/>
 			<Products />
 			<ProductDetails />
 			<Description />
@@ -17,4 +19,12 @@ function HomePage() {
 	);
 }
 
+// export async function getStaticProps(context) {
+// return {
+// 	props: {
+
+// 	}
+// }
+// }
 export default HomePage;
+
