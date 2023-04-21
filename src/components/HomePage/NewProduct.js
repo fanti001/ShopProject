@@ -3,7 +3,7 @@ const NewProduct = (props) => {
 	const router = useRouter();
 
 	const changePage = () =>{
-	console.log('clicked');
+		router.push('/' +props.id);
 	}
 	return (
 		<div className='new-product'>

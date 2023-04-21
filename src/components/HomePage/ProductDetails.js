@@ -1,4 +1,10 @@
+import { useRouter } from "next/router";
+
 const ProductDetails = () => {
+const router = useRouter()
+   const changePage = () =>{
+router.push()
+   }
    return (
       <div className="product-details">
          <div className="product-details__speaker-zx9">
