@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const ProductDetails = () => {
 const router = useRouter()
    const changePage = () =>{
-router.push()
+router.push('/'+ props.id)
    }
    return (
       <div className="product-details">
@@ -13,7 +13,7 @@ router.push()
             </div>
             <span>zx9 speaker</span>
             <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-            <button>see product</button>
+            <button onClick={changePage}>see product</button>
          </div>
 
          <div className="product-details__speaker-zx7">
