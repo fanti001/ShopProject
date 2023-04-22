@@ -24,13 +24,13 @@ export const headphones = [
 		id: "04",
 	},
 	{
-		title: "TTT speakers",
+		title: "zx9 speaker",
 		category: "speakers",
 		price: 5554,
 		id: "05",
 	},
 	{
-		title: "Cdssk speakers",
+		title: "zx7 speaker",
 		category: "speakers",
 		price: 3223,
 		id: "06",
@@ -48,7 +48,7 @@ export const headphones = [
 		id: "08",
 	},
 	{
-		title: " earphones",
+		title: "yx1 earphones",
 		category: "earphones",
 		price: 2334.999,
 		id: "09",

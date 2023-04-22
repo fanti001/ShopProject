@@ -86,7 +86,7 @@
       color: #000000;
       align-content: center;
       justify-content: flex-start;
-      z-index: -2;
+      // z-index: -2;
       .speaker-zx7__background {
          position: absolute;
          width: 70%;
@@ -96,7 +96,7 @@
          background-repeat: no-repeat;
          background-position: center;
          background-size: contain;
-         z-index: -1;
+         // z-index: -3;
       }
       .speaker-zx7__desc {
          span {
@@ -108,6 +108,7 @@
             margin-bottom: 20px;
          }
          button {
+            z-index: 100;
             width: 150px;
             height: 45px;
             background-color: transparent;
