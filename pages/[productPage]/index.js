@@ -9,7 +9,7 @@ const ProductPage = (props) =>{
     <p>img</p>
     {/* {console.log(headphones)} */}
 
-    <p className='title'>product title {`${props.productData.title}`}</p>
+    <h2 className='title'>product title {`${props.productData.title}`}</h2>
         </>
 }
 
