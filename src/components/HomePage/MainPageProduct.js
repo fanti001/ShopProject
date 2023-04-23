@@ -16,7 +16,7 @@ const MainPageProduct = (props) => {
 	return (
 		<div className={props.graph}>
 			<div className={props.bgc}></div>
-			<div className={props.desc === true ? props.desc : 'products-mobile'}>
+			<div className={props.desc ? props.desc : 'products-mobile'}>
 				<span>{props.title}</span>
 				{props.children}
 				<button onClick={findProduct}>see product</button>
