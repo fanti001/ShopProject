@@ -1,14 +1,16 @@
 import '../src/styles/main.scss'
 import Layout from "../src/components/Layout/Layout"
 
+import { Provider } from 'react-redux'
+
 function App({
   Component,
   pageProps
 }) {
-  return <Layout > < Component {
+  return <Provider store={store}><Layout > < Component {
     ...pageProps
   }
-  /></Layout >
+  /></Layout ></Provider>
 }
 
 export default App
