@@ -63,7 +63,7 @@ const ProductDetails = () => {
 				</div> */}
 			</MainPageProduct>
 
-			{/* { previous leyout of this page !!!!!!!!! } */}
+			{/* { previous layout of this page !!!!!!!!! } */}
 			{/* <div className='product-details__speaker-zx9'>
 				<div className='speaker-zx9__logo'></div>
 				<span>zx9 speaker</span>
