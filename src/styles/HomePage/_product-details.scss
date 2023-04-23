@@ -162,3 +162,13 @@
    }
    }
 }
+
+.products-mobile{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;align-items: center;
+
+   p{
+      padding: 1em 3em;
+   }
+}

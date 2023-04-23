@@ -1,7 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
+// import { configureStore } from "@reduxjs/toolkit";
 
-const store = configureStore({
-    reducer: addProductsToCart,
-})
+// const store = configureStore({
+//     reducer: addProductsToCart,
+// })
 
-export default store;
+// export default store;
