@@ -4,11 +4,11 @@ const MainPageProduct = (props) => {
 	const router = useRouter();
 
 	const findProduct = () => {
-		console.log(props.title);
+		
 		const product = headphones.filter(
 			(product) => product.title == props.title
 		);
-		console.log(product);
+		
 		const productId = product[0].id;
 		router.push("/" + productId);
 	};

@@ -1,15 +1,28 @@
 import {headphones} from '../../database';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { cartActions } from '../../store/cartSlice';
 const ProductPage = (props) =>{
+const cartState = useSelector(state => state.cartSlice.items)
+    const dispatch = useDispatch();
+
+
+    const addProduct = () =>{
+        dispatch(cartActions.addProductToCart({title:props.productData.title,
+            id: props.productData.id,
+            price: props.productData.price}));
+    }
     return <>
     <p>automatic generation page (inner page) </p>
 
     <p>product header</p>
-
     <p>img</p>
     {/* {console.log(headphones)} */}
 
     <h2 className='title'>product title {`${props.productData.title}`}</h2>
+
+    <button onClick={addProduct}>add product</button>
+    {console.log(cartState)}
         </>
 }
 
