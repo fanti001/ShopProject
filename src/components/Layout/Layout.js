@@ -1,11 +1,13 @@
-import NavBar from './NavBar'; 
-import Footer from './Footer'; 
+import NavBar from './NavBar';
+import Footer from './Footer';
+
 
 
 function Layout(props) {
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <NavBar />
+
       <main >{props.children}</main>
       <Footer />
     </div>
