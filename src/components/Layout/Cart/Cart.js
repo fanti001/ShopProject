@@ -1,15 +1,18 @@
 import { useState } from "react";
 import CardProduct from './CartProduct'
-const Cart = () => {
-   const [menuActive, setMenuActive] = useState(false);
+const Cart = ({ menuActive, setMenuActive }) => {
+
    const handleExitButton = () => {
-      document.body.style.overflow = 'scroll';
-      setMenuActive(true)
+      document.body.style.overflowY = 'scroll';
+      setMenuActive(false)
    }
 
    return (
-      <div className="cart__background">
-         <div className={`cart ${!menuActive ? 'cart--hide' : null}`}>
+      <>
+         <div className={`${menuActive ? 'cart__background--active' : 'cart__background--hide'}`} onClick={handleExitButton} >
+
+         </div >
+         <div className={`cart ${menuActive ? 'cart--show' : null}`}>
             <span className="cart__sum">Summary</span>
             <span className="cart__exit"><button onClick={handleExitButton}></button></span>
             <div className="cart__products">
@@ -31,8 +34,9 @@ const Cart = () => {
                <span>GrandTotal</span><span>$54545.45</span>
                <button>Checkout</button>
             </div>
-         </div>
-      </div >
+
+         </div >
+      </>
    );
 }
 

@@ -1,13 +1,20 @@
 import Link from "next/link";
-
+import Cart from './Cart/Cart';
 import { useState } from "react";
 
 const NavBar = () => {
 	const [showNav, setShowNav] = useState(false);
-
+	const [menuActive, setMenuActive] = useState(false);
 	const showNavigation = () => {
 		setShowNav(!showNav);
 	};
+
+	const handleCartButton = () => {
+		// document.body.style.overflow = 'hidden';
+		setMenuActive(true);
+		console.log("dzoała")
+	};
+
 	return (
 		<div className='nav-bar'>
 			<div onClick={showNavigation} className='nav-bar__menu-button'></div>
@@ -50,8 +57,8 @@ const NavBar = () => {
 				<h1>audiophile</h1>
 			</div>
 
-			<div className='nav-bar__cart'></div>
-
+			<div className='nav-bar__cart' onClick={handleCartButton}></div>
+			<Cart menuActive={menuActive} setMenuActive={setMenuActive} />
 		</div>
 	);
 };

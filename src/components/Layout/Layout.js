@@ -1,13 +1,13 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import Cart from './Cart/Cart';
+
 
 
 function Layout(props) {
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <NavBar />
-      <Cart />
+
       <main >{props.children}</main>
       <Footer />
     </div>
