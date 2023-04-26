@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { useState } from "react";
+
 const NavBar = () => {
 	const [showNav, setShowNav] = useState(false);
 
@@ -50,6 +51,7 @@ const NavBar = () => {
 			</div>
 
 			<div className='nav-bar__cart'></div>
+
 		</div>
 	);
 };

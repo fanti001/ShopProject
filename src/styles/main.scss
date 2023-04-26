@@ -6,7 +6,9 @@
 
 
 @import './reset';
-@import './_nav-bar.scss';
+@import './_nav-bar';
+@import './Cart/cart';
+@import './Cart/cart-product';
 @import './HomePage/new-product';
 @import './HomePage/products';
 @import './HomePage/product';
