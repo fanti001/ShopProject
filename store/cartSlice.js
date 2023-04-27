@@ -8,10 +8,6 @@ const cartSlice = createSlice({
         let newItem = action.payload;
     
 state.items.push({newItem}) 
-
-
-
-        // state.push(newItem)
     },
     }
 })
