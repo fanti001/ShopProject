@@ -32,9 +32,10 @@ const ProductPage = (props) => {
 			</div>
 
             <div className="features">
-                <p className="features__description">
+                <div className="features__description">
                     <h3>Features</h3>
-                </p>
+                    <p></p>
+                </div>
                 <h3>In the Box</h3>
                 <ul>
                     <li><span>1x</span>headphones Unit</li>
