@@ -3,7 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
     name: 'cart',
-    initialState: { items: [] },
+    initialState: {
+        cartTotal: 0,
+        cartShipping: 50,
+        cartVAT: 0,
+        cartGrandTotal: 0,
+        items: []
+    },
     reducers: {
         addProductToCart(state, action) {
             const currentState = JSON.parse(JSON.stringify(state));
@@ -14,6 +20,8 @@ const cartSlice = createSlice({
             })
 
             if (finded >= 0) {
+
+
                 state.items[finded] = { ...action.payload, pcs: state.items[finded].pcs + 1 };
 
             } else {
@@ -24,6 +32,29 @@ const cartSlice = createSlice({
             }
 
         },
+        vatCounter(state) {
+            return {
+                ...state,
+                cartVAT: (state.cartTotal * 0.23).toFixed(2)
+            }
+        },
+        totalCounter(state) {
+            const currentState = JSON.parse(JSON.stringify(state));
+            const totalPrice = currentState.items.reduce((prev, next) => {
+                return prev + next.price
+            }, state.cartTotal)
+            return {
+                ...state,
+                cartTotal: parseInt(totalPrice.toFixed(2))
+            }
+        },
+        grandTotalCounter(state) {
+            return {
+                ...state,
+                cartGrandTotal: state.cartTotal + state.cartShipping
+
+            }
+        }
     }
 })
 

@@ -5,6 +5,8 @@ import { cartActions } from "../../../../store/cartSlice";
 
 const Cart = ({ menuActive, setMenuActive }) => {
 	const cartStore = useSelector((state) => state.cartSlice.items);
+	const { cartTotal, cartShipping, cartVAT, cartGrandTotal } = useSelector((state) => state.cartSlice);
+
 	const handleExitButton = () => {
 		document.body.style.overflowY = "scroll";
 		setMenuActive(false);
@@ -45,13 +47,13 @@ const Cart = ({ menuActive, setMenuActive }) => {
 				</div>
 				<div className='cart__total'>
 					<span>Total</span>
-					<span>$ 213123123</span>
+					<span>${cartTotal}</span>
 					<span>Shipping</span>
-					<span> $34</span>
+					<span>${cartShipping}</span>
 					<span>Vat(included)</span>
-					<span>$312312</span>
+					<span>${cartVAT}</span>
 					<span>GrandTotal</span>
-					<span>$54545.45</span>
+					<span>${cartGrandTotal}</span>
 					<button>Checkout</button>
 				</div>
 			</div>

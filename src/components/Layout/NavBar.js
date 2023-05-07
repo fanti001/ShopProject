@@ -12,7 +12,6 @@ const NavBar = () => {
 	const handleCartButton = () => {
 		// document.body.style.overflow = 'hidden';
 		setMenuActive(true);
-		console.log("dzoała")
 	};
 
 	return (

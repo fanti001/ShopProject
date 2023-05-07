@@ -14,6 +14,10 @@ const ProductPage = (props) => {
 				pcs: 1
 			})
 		);
+		dispatch(cartActions.totalCounter())
+		dispatch(cartActions.vatCounter());
+		dispatch(cartActions.grandTotalCounter());
+
 	};
 	return (
 		<>
