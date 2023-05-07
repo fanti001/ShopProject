@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { cartActions } from "../../store/cartSlice";
 const ProductPage = (props) => {
-	// const cartState = useSelector((state) => state.cartSlice.items);
+	const cartState = useSelector((state) => state.cartSlice.items);
 	const dispatch = useDispatch();
-
 	const addProduct = () => {
 		dispatch(
 			cartActions.addProductToCart({
 				title: props.productData.title,
 				id: props.productData.id,
 				price: props.productData.price,
+				pcs: 1
 			})
 		);
 	};
@@ -25,24 +25,24 @@ const ProductPage = (props) => {
 					<p className="product__header-text-description">{props.productData.shortDescription}</p>
 					<p className="product__header-text-price">${props.productData.price}</p>
 					<div className='product__header-buttons'>
-                        <input placeholder="1" className="product__header-input" type="number" />
-                        <button className="product__header-addBtn" onClick={addProduct}>add product</button>
-                    </div>
+						<input placeholder="1" className="product__header-input" type="number" />
+						<button className="product__header-addBtn" onClick={addProduct}>add product</button>
+					</div>
 				</div>
 			</div>
 
-            <div className="features">
-                <div className="features__description">
-                    <h3>Features</h3>
-                    <p></p>
-                </div>
-                <h3>In the Box</h3>
-                <ul>
-                    <li><span>1x</span>headphones Unit</li>
-                    <li><span>2x</span>Replacement Earcups</li>
-                    <li><span>1x</span>User Manual</li>
-                </ul>
-            </div>
+			<div className="features">
+				<div className="features__description">
+					<h3>Features</h3>
+					<p></p>
+				</div>
+				<h3>In the Box</h3>
+				<ul>
+					<li><span>1x</span>headphones Unit</li>
+					<li><span>2x</span>Replacement Earcups</li>
+					<li><span>1x</span>User Manual</li>
+				</ul>
+			</div>
 
 			{/* <p>automatic generation page (inner page) </p> */}
 
@@ -106,8 +106,8 @@ export async function getStaticProps(context) {
 			productData: {
 				title: filteredProduct.title,
 				id: filteredProduct.id,
-                shortDescription: filteredProduct.shortDescription,
-                longDescription: filteredProduct.longDescription,
+				shortDescription: filteredProduct.shortDescription,
+				longDescription: filteredProduct.longDescription,
 				price: filteredProduct.price,
 			},
 		},
