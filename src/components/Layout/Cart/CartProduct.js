@@ -4,7 +4,7 @@ const CartProduct = (props) => {
          <div className="cart-product__image"></div>
          <span>{props.title}</span>
          <span>{props.price}</span>
-         <span>x1</span>
+         <span>x{props.pcs}</span>
       </div>
    );
 }

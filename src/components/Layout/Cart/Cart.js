@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import CartProduct from "./CartProduct";
 import { useSelector } from "react-redux";
 import { cartActions } from "../../../../store/cartSlice";
@@ -10,12 +10,12 @@ const Cart = ({ menuActive, setMenuActive }) => {
 		setMenuActive(false);
 	};
 
+
 	return (
 		<>
 			<div
-				className={`${
-					menuActive ? "cart__background--active" : "cart__background--hide"
-				}`}
+				className={`${menuActive ? "cart__background--active" : "cart__background--hide"
+					}`}
 				onClick={handleExitButton}></div>
 			<div className={`cart ${menuActive ? "cart--show" : null}`}>
 				<span className='cart__sum'>Summary</span>
@@ -25,11 +25,12 @@ const Cart = ({ menuActive, setMenuActive }) => {
 				<div className='cart__products'>
 					{cartStore.map((product) => {
 						return (
-                     <CartProduct
-                     key={Math.random()}
-                     title={product.newItem.title}
-                     price={product.newItem.price}></CartProduct>
-                     
+							<CartProduct
+								key={Math.random()}
+								title={product.title}
+								price={product.price}
+								pcs={product.pcs}></CartProduct>
+
 						);
 					})}
 					{/* <CardProduct />
