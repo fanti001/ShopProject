@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
+        menuActive: false,
         cartTotal: 0,
         cartShipping: 50,
         cartVAT: 0,
@@ -11,6 +12,9 @@ const cartSlice = createSlice({
         items: []
     },
     reducers: {
+        toggleCart(state){
+            state.menuActive = !state.menuActive;
+        },
         addProductToCart(state, action) {
             const currentState = JSON.parse(JSON.stringify(state));
             const { payload } = action;

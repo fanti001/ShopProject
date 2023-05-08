@@ -1,17 +1,24 @@
 import Link from "next/link";
 import Cart from './Cart/Cart';
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../../store/cartSlice";
+import cartSlice from "../../../store/cartSlice";
 
 const NavBar = () => {
+
+	const dispatch = useDispatch();
+	const menuActive = useSelector(state =>state.cartSlice.menuActive)
 	const [showNav, setShowNav] = useState(false);
-	const [menuActive, setMenuActive] = useState(false);
+	// const [menuActive, setMenuActive] = useState(false);
 	const showNavigation = () => {
 		setShowNav(!showNav);
 	};
 
 	const handleCartButton = () => {
 		// document.body.style.overflow = 'hidden';
-		setMenuActive(true);
+		// setMenuActive(true);
+		dispatch(cartActions.toggleCart())
 	};
 
 	return (
@@ -57,7 +64,10 @@ const NavBar = () => {
 			</div>
 
 			<div className='nav-bar__cart' onClick={handleCartButton}></div>
-			<Cart menuActive={menuActive} setMenuActive={setMenuActive} />
+			<Cart 
+			menuActive={menuActive} 
+			// setMenuActive={setMenuActive} 
+			/>
 		</div>
 	);
 };
