@@ -12,13 +12,15 @@
 		padding: 5em;
 		margin: 2em;
 	}
-
+	
 	&-text {
+		padding: 0 0.5em;
 		&-newProduct {
 			color: rgba(208, 118, 54, 0.75);
 			text-transform: uppercase;
 		}
 		&-title {
+			text-transform: uppercase;
 			padding: 0.5em 0;
 			font-size: 2rem;
 			font-weight: bold;
@@ -27,6 +29,8 @@
 			padding: 0.5em 0;
             font-weight: bold;
             font-size: 1.5rem;
+		}
+		&-description{
 		}
 	}
 

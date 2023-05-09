@@ -2,7 +2,12 @@ import { headphones } from "../../database";
 import { useDispatch, useSelector } from "react-redux";
 
 import { cartActions } from "../../store/cartSlice";
+import { useEffect } from "react";
+import cartSlice from "../../store/cartSlice";
 const ProductPage = (props) => {
+
+	const cartVisible = useSelector(state => state.cartSlice.menuActive);
+
 	const cartState = useSelector((state) => state.cartSlice.items);
 	const dispatch = useDispatch();
 	const addProduct = () => {
@@ -17,8 +22,22 @@ const ProductPage = (props) => {
 		dispatch(cartActions.totalCounter())
 		dispatch(cartActions.vatCounter());
 		dispatch(cartActions.grandTotalCounter());
-
+		dispatch(cartActions.toggleCart())
+		
 	};
+
+
+		
+useEffect(
+		()=>{
+			setTimeout(()=>{
+				cartVisible && dispatch(cartActions.toggleCart())
+			},2000)
+			clearTimeout()
+			
+	}
+) 
+	
 	return (
 		<>
 			<div className='product__header'>

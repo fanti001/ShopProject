@@ -1,15 +1,24 @@
 
 import CartProduct from "./CartProduct";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../../../store/cartSlice";
+import cartSlice from "../../../../store/cartSlice";
 
-const Cart = ({ menuActive, setMenuActive }) => {
+const Cart = (
+	// { menuActive, setMenuActive }
+	) => {
+
+		const dispatch = useDispatch();
+
+	const menuActive = useSelector((state) => state.cartSlice.menuActive);
 	const cartStore = useSelector((state) => state.cartSlice.items);
 	const { cartTotal, cartShipping, cartVAT, cartGrandTotal } = useSelector((state) => state.cartSlice);
 
 	const handleExitButton = () => {
 		document.body.style.overflowY = "scroll";
-		setMenuActive(false);
+		// setMenuActive(false);
+
+		dispatch(cartActions.toggleCart())
 	};
 
 
