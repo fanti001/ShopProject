@@ -25,10 +25,30 @@
 		font-weight: 700;
 	}
 	.nav-bar__cart {
+		position: relative;
 		width: 25px;
 		aspect-ratio: 1/1;
 		background-image: url("../../public/assets/cart.svg");
 		background-repeat: no-repeat;
+
+		.cart-circle {
+			position: absolute;
+			display: grid;
+			place-items: center;
+			bottom: -5px;
+			right: -5px;
+			width: 70%;
+			transform: scale(100%);
+			font-size: 1.2rem;
+			font-weight: 900;
+			border-radius: 50%;
+			aspect-ratio: 1/1;
+			background-color: orange;
+			
+		}
+		.cart-circle--active {
+			animation: circle-cart-animation .4s linear 1;
+		}
 	}
 }
 .navbar-menu {
@@ -54,4 +74,17 @@
    .navLink{
       text-decoration: none;
    }
+}
+
+
+@keyframes circle-cart-animation {
+	0% {
+		transform: scale(100%);
+	}
+	50% {
+		transform: scale(70%);
+	}
+	100% {
+		transform: scale(100%);
+	}
 }
