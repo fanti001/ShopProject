@@ -22,22 +22,22 @@ const ProductPage = (props) => {
 		dispatch(cartActions.totalCounter())
 		dispatch(cartActions.vatCounter());
 		dispatch(cartActions.grandTotalCounter());
-		dispatch(cartActions.toggleCart())
-		
+		// dispatch(cartActions.toggleCart())
+
 	};
 
 
-		
-useEffect(
-		()=>{
-			setTimeout(()=>{
-				cartVisible && dispatch(cartActions.toggleCart())
-			},2000)
-			clearTimeout()
-			
-	}
-) 
-	
+
+	// useEffect(
+	// 		()=>{
+	// 			setTimeout(()=>{
+	// 				cartVisible && dispatch(cartActions.toggleCart())
+	// 			},2000)
+	// 			clearTimeout()
+
+	// 	}
+	// ) 
+
 	return (
 		<>
 			<div className='product__header'>
@@ -49,7 +49,11 @@ useEffect(
 					<p className="product__header-text-price">${props.productData.price}</p>
 					<div className='product__header-buttons'>
 						<input placeholder="1" className="product__header-input" type="number" />
-						<button className="product__header-addBtn" onClick={addProduct}>add product</button>
+						<button
+							className="product__header-addBtn"
+							onClick={addProduct}
+						>add product
+						</button>
 					</div>
 				</div>
 			</div>

@@ -9,10 +9,10 @@ const cartSlice = createSlice({
         cartShipping: 50,
         cartVAT: 0,
         cartGrandTotal: 0,
-        items: []
+        items: [],
     },
     reducers: {
-        toggleCart(state){
+        toggleCart(state) {
             state.menuActive = !state.menuActive;
         },
         addProductToCart(state, action) {
