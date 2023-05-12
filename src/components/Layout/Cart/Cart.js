@@ -1,22 +1,21 @@
 
 import CartProduct from "./CartProduct";
+import Blocker from "../Blocker";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../../../store/cartSlice";
 import cartSlice from "../../../../store/cartSlice";
 
 const Cart = (
-	// { menuActive, setMenuActive }
-	) => {
+) => {
 
-		const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
-	const menuActive = useSelector((state) => state.cartSlice.menuActive);
+	const cartActive = useSelector((state) => state.cartSlice.cartActive);
 	const cartStore = useSelector((state) => state.cartSlice.items);
 	const { cartTotal, cartShipping, cartVAT, cartGrandTotal } = useSelector((state) => state.cartSlice);
 
 	const handleExitButton = () => {
 		document.body.style.overflowY = "scroll";
-		// setMenuActive(false);
 
 		dispatch(cartActions.toggleCart())
 	};
@@ -24,11 +23,8 @@ const Cart = (
 
 	return (
 		<>
-			<div
-				className={`${menuActive ? "cart__background--active" : "cart__background--hide"
-					}`}
-				onClick={handleExitButton}></div>
-			<div className={`cart ${menuActive ? "cart--show" : null}`}>
+			<Blocker active={cartActive} hideBlocker={handleExitButton}></Blocker>
+			<div className={`cart ${cartActive ? "cart--show" : null}`}>
 				<span className='cart__sum'>Summary</span>
 				<span className='cart__exit'>
 					<button onClick={handleExitButton}></button>

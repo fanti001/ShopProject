@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Cart from './Cart/Cart';
+import Blocker from "./Blocker";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../../store/cartSlice";
@@ -8,18 +9,16 @@ import cartSlice from "../../../store/cartSlice";
 const NavBar = () => {
 
 	const dispatch = useDispatch();
-	const { menuActive, items } = useSelector(state => state.cartSlice)
+	const { cartActive, items } = useSelector(state => state.cartSlice)
 	const [showNav, setShowNav] = useState(false);
 	const [circleActive, setCircleActive] = useState(false);
 	const [itemsPCS, setItemsPCS] = useState(0);
-	// const [menuActive, setMenuActive] = useState(false);
+
 	const showNavigation = () => {
 		setShowNav(!showNav);
 	};
 
 	const handleCartButton = () => {
-		// document.body.style.overflow = 'hidden';
-		// setMenuActive(true);
 		dispatch(cartActions.toggleCart())
 	};
 
@@ -49,56 +48,61 @@ const NavBar = () => {
 			clearTimeout(circleAnimation);
 		}
 	}, [circleActive])
+
+
 	return (
-		<div className='nav-bar'>
-			<div onClick={showNavigation} className='nav-bar__menu-button'></div>
-			{/* 'navbar-menu' 0*/}
-			<nav className={showNav ? "navbar-menu active" : "navbar-menu"}>
-				<ul className='menu0-list'>
-					<li>
-						<Link href='/' onClick={showNavigation} className='navLink'>
-							home
-						</Link>
-					</li>
-					<li>
-						<Link
-							href='/HeadphonesPage'
-							onClick={showNavigation}
-							className='navLink'>
-							headphones
-						</Link>
-					</li>
-					<li>
-						<Link
-							href='/SpeakersPage'
-							onClick={showNavigation}
-							className='navLink'>
-							speakers
-						</Link>
-					</li>
-					<li>
-						<Link
-							href='/EarphonesPage'
-							onClick={showNavigation}
-							className='navLink'>
-							earphones
-						</Link>
-					</li>
-				</ul>
-			</nav>
+		<>
 
-			<div className='nav-bar__logo'>
-				<h1>audiophile</h1>
-			</div>
+			<div className='nav-bar'>
+				<Blocker active={showNav} hideBlocker={() => {
+					setShowNav(false)
+				}}></Blocker>
+				<div onClick={showNavigation} className={!showNav ? 'nav-bar__menu-button' : 'nav-bar__menu-button nav-bar__menu-button--active'}></div>
+				{/* 'navbar-menu' 0*/}
+				<nav className={showNav ? "navbar-menu active" : "navbar-menu"}>
+					<ul className='menu-list'>
+						<li>
+							<Link href='/' onClick={showNavigation} className='navLink'>
+								home
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/HeadphonesPage'
+								onClick={showNavigation}
+								className='navLink'>
+								headphones
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/SpeakersPage'
+								onClick={showNavigation}
+								className='navLink'>
+								speakers
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/EarphonesPage'
+								onClick={showNavigation}
+								className='navLink'>
+								earphones
+							</Link>
+						</li>
+					</ul>
+				</nav>
 
-			<div className='nav-bar__cart' onClick={handleCartButton}>
-				{itemsPCS >= 1 ? <span className={circleActive ? `cart-circle cart-circle--active` : `cart-circle`}>{itemsPCS}</span> : null}
+				<div className='nav-bar__logo'>
+					<h1>audiophile</h1>
+				</div>
+
+				<div className='nav-bar__cart' onClick={handleCartButton}>
+					{itemsPCS >= 1 ? <span className={circleActive ? `cart-circle cart-circle--active` : `cart-circle`}>{itemsPCS}</span> : null}
+				</div>
+				<Cart />
 			</div>
-			<Cart
-				menuActive={menuActive}
-			// setMenuActive={setMenuActive} 
-			/>
-		</div>
+		</>
 	);
 };
 

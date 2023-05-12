@@ -2,7 +2,7 @@
 const HeadphonesPage = () => {
    return (
       <>
-      <p>headphones</p>
+         <p>headphones</p>
          {/* them components moved to homePage( index.js) */}
          {/* <NewProduct />
          <Products />
