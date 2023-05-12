@@ -6,10 +6,12 @@ import store from "../store/store";
 function App({ Component, pageProps }) {
 	return (
 		<Provider store={store}>
-			<Layout>
-				{" "}
-				<Component {...pageProps} />
-			</Layout>
+			<div className='app'>
+				<Layout>
+					{" "}
+					<Component {...pageProps} />
+				</Layout>
+			</div>
 		</Provider>
 	);
 }

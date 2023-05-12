@@ -1,13 +1,13 @@
-.cart__background--active, .cart__background--hide {
+.blocker--active, .blocker--hide {
    position: fixed;
    top: 0;
    left: 0;
    width: 100vw;
    height: 100vh;
-   z-index: 10;
+   z-index: 2;
    background-color: rgba(0, 0, 0, 0.222);
 }
-.cart__background--hide {
+.blocker--hide {
    width: 0;
    height: 0;
 }
