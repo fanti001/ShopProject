@@ -1,7 +1,7 @@
 // import { useRouter } from "next/router";
 import MainPageProduct from "./MainPageProduct";
 import { headphones } from "../../../database";
-
+import { useEffect, useState } from "react";
 const ProductDetails = () => {
 	// const router = useRouter();
 	// const changePage = () => {
@@ -13,13 +13,33 @@ const ProductDetails = () => {
 
 	// 	return id;
 	// };
+	const [windowY, setWindowY] = useState(0)
+
+	const scrollYHandler = () => {
+		setWindowY(window.scrollY + window.innerHeight)
+
+	}
+
+
+	useEffect(() => {
+		window.addEventListener('scroll', scrollYHandler);
+		window.addEventListener('resize', scrollYHandler);
+		return () => {
+			window.removeEventListener("scroll", scrollYHandler);
+			window.removeEventListener("resize", scrollYHandler);
+		}
+
+	})
 	return (
 		<div className='product-details'>
 			{/* {something wrong with the layout of this component } */}
 			<MainPageProduct
 				title='zx9 speaker'
 				graph='product-details__speaker-zx9'
-				bgc='speaker-zx9__logo'>
+				bgc='speaker-zx9__logo'
+				windowY={windowY}
+				animationDuration='1s'
+			>
 				{/* <div className='product-details__speaker-zx9'>
 					<div className='speaker-zx9__logo'></div>
 					<span>zx9 speaker</span>
@@ -38,7 +58,9 @@ const ProductDetails = () => {
 				title='zx7 speaker'
 				graph='product-details__speaker-zx7'
 				bgc='speaker-zx7__background'
-				desc='speaker-zx7__desc'>
+				desc='speaker-zx7__desc'
+				windowY={windowY}
+				animationDuration='1.2s'>
 				{/* <div className='product-details__speaker-zx7'>
 				<div className='speaker-zx7__background'></div>
 				<div className='speaker-zx7__desc'>
@@ -52,7 +74,9 @@ const ProductDetails = () => {
 				title='yx1 earphones'
 				graph='product-details__earphones-yx1'
 				bgc='earphones-yx1__bg'
-				desc='earphones-yx1__desc'>
+				desc='earphones-yx1__desc'
+				windowY={windowY}
+				animationDuration='1.5s'>
 				{/* <div className='product-details__earphones-yx1'>
 					<div className='earphones-yx1__bg'></div>
 

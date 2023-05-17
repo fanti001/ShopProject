@@ -116,6 +116,7 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-top: 20px;
+            color:#000000
          }
    }
    }
@@ -158,11 +159,14 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-top: 20px;
+            color:#000000
          }
    }
    }
 }
-
+.product-details__speaker-zx9, .product-details__earphones-yx1, .product-details__speaker-zx7 {
+   opacity: 0;
+}
 .products-mobile{
    display: flex;
    flex-direction: column;
