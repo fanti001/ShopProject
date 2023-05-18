@@ -1,6 +1,5 @@
 // import { useRouter } from "next/router";
 import MainPageProduct from "./MainPageProduct";
-import { headphones } from "../../../database";
 import { useEffect, useState } from "react";
 const ProductDetails = () => {
 	// const router = useRouter();

@@ -3,7 +3,6 @@ import CartProduct from "./CartProduct";
 import Blocker from "../Blocker";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../../../store/cartSlice";
-import cartSlice from "../../../../store/cartSlice";
 
 const Cart = (
 ) => {

@@ -7,7 +7,7 @@ const MainPageProduct = (props) => {
 	const findProduct = () => {
 
 		const product = headphones.filter(
-			(product) => product.title == props.title
+			(product) => product.title === props.title
 		);
 
 		const productId = product[0].id;
@@ -16,11 +16,18 @@ const MainPageProduct = (props) => {
 
 	const productEl = useRef(null)
 
-	useEffect(() => {
+	const getHeightOfElementOnOY = () => {
 		if (productEl.current) {
 			const product = productEl.current;
-			props.windowY >= Math.floor(product.getBoundingClientRect().top + window.scrollY) ? setActiveAnimation(true) : null;
+			const heightOfElement = Math.floor(product.getBoundingClientRect().top + window.scrollY);
+			const heightOfWindow = props.windowY;
+			return heightOfWindow >= heightOfElement ? setActiveAnimation(true) : null;
 		}
+	}
+
+	useEffect(() => {
+		getHeightOfElementOnOY();
+
 
 	})
 
@@ -38,12 +45,6 @@ const MainPageProduct = (props) => {
 			</div>
 		</div >
 	);
-	{
-		/* {props.children} */
-	}
-	{
-		/* <button onClick={findProduct}>See Product</button> */
-	}
 };
 
 export default MainPageProduct;
