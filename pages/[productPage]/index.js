@@ -1,14 +1,12 @@
 import { headphones } from "../../database";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
-import { useEffect } from "react";
-import cartSlice from "../../store/cartSlice";
+
 const ProductPage = (props) => {
 
-	const cartVisible = useSelector(state => state.cartSlice.menuActive);
+	// const cartVisible = useSelector(state => state.cartSlice.menuActive);
+	// const cartState = useSelector((state) => state.cartSlice.items);
 
-	const cartState = useSelector((state) => state.cartSlice.items);
 	const dispatch = useDispatch();
 	const addProduct = () => {
 		dispatch(
@@ -121,12 +119,12 @@ export async function getStaticProps(context) {
 	// fetch('/api/database',{method: 'GET'}).then(res => console.log(res)).catch();
 
 	const productPageId = context.params.productPage;
-	console.log(productPageId);
+	// console.log(productPageId);
 
 	const filteredProduct = headphones.find(
 		(product) => product.id === productPageId
 	);
-	console.log(filteredProduct);
+	// console.log(filteredProduct);
 
 	return {
 		props: {

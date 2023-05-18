@@ -4,12 +4,11 @@ import Blocker from "./Blocker";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../../store/cartSlice";
-import cartSlice from "../../../store/cartSlice";
 
 const NavBar = () => {
 
 	const dispatch = useDispatch();
-	const { cartActive, items } = useSelector(state => state.cartSlice)
+	const { items } = useSelector(state => state.cartSlice)
 	const [showNav, setShowNav] = useState(false);
 	const [circleActive, setCircleActive] = useState(false);
 	const [itemsPCS, setItemsPCS] = useState(0);
@@ -32,7 +31,6 @@ const NavBar = () => {
 	}
 	let circleAnimation;
 	const circleHandler = () => {
-		console.log(itemsPCS)
 		setCircleActive(true);
 		circleAnimation = setTimeout(() => setCircleActive(false), 300);
 	}
